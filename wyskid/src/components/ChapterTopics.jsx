@@ -2,15 +2,14 @@ import Topic from "./Topic";
 
 export default function ChapterTopics() {
   return (
-    <>
-      <Topic
-        p={
-          "Lorem ipsum dolor sit amet consectetur adipisicing elit. Quisquam totam amet odio ullam sapiente eum fuga voluptate magnam accusamus voluptatum."
-        }
-        heading={"Beginner's Luck"}
-        percent={70}
-      />
-      <Topic
+    <Topic
+      p={
+        "Lorem ipsum dolor sit amet consectetur adipisicing elit. Quisquam totam amet odio ullam sapiente eum fuga voluptate magnam accusamus voluptatum."
+      }
+      heading={"Beginner's Luck"}
+      percent={70}
+    />
+    /* <Topic
         p={
           "Lorem ipsum dolor sit amet consectetur adipisicing elit. Quisquam totam amet odio ullam sapiente eum fuga voluptate magnam accusamus voluptatum."
         }
@@ -44,7 +43,6 @@ export default function ChapterTopics() {
         }
         heading={"Beginner's Luck"}
         percent={15}
-      />
-    </>
+      /> */
   );
 }

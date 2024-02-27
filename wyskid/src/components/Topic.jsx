@@ -1,7 +1,7 @@
 import Progress from "./Progress";
 export default function Topic({ heading, p, percent }) {
   return (
-    <li className="flex flex-col  justify-start w-full h-1/4 lg:h-1/3 m-1 p-2 rounded-lg lg:rounded-xl bg-primary border-2 border-neutral-100">
+    <button className="flex flex-col  justify-start w-full h-1/4 lg:h-1/3 m-1 p-2 rounded-lg lg:rounded-xl bg-primary border-2 border-neutral-100">
       <div className="lg:text-4xl ">⭐⭐⭐</div>
       <h3 className="text-xl lg:pt-4 lg:pb-4 font-semibold lg:text-2xl">
         {heading}
@@ -10,6 +10,6 @@ export default function Topic({ heading, p, percent }) {
         {p}
       </p>
       <Progress percent={percent} />
-    </li>
+    </button>
   );
 }

@@ -1,9 +1,15 @@
 import React from "react";
 
-const Window = () => {
+const Window = ({ data, handleWindow }) => {
   return (
     <div className="relative flex items-center justify-start flex-col p-3  rounded-xl lg:rounded-3xl bg-primary w-3/4 h-5/6">
       <button
+        onClick={() =>
+          handleWindow({
+            ...data,
+            open: true,
+          })
+        }
         id="close"
         className="absolute top-[-0.75rem] right-[-0.75rem] z-10 bg-red-600 w-8 h-8 rounded-full "
       >

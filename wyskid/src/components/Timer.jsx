@@ -9,8 +9,14 @@ export default function Timer({ time, onExpire }) {
   useEffect(() => {
     // console.log(remainingTime.time);
     const interval = setInterval(() => {
+      setRemainingTime((prevRemainingTime) => {
+        return {
+          time: prevRemainingTime.time - 1000,
+          id: interval,
+        };
+      });
       console.log(remainingTime.time);
-      if (remainingTime.time <= 0) {
+      if (remainingTime.time === 0) {
         console.log(remainingTime.time);
         clearInterval(remainingTime.id);
         onExpire({
@@ -19,12 +25,6 @@ export default function Timer({ time, onExpire }) {
           selectionOptionText: "",
         });
       }
-      setRemainingTime((prevRemainingTime) => {
-        return {
-          time: prevRemainingTime.time - 1000,
-          id: interval,
-        };
-      });
     }, 1000);
 
     return () => clearInterval(interval);
